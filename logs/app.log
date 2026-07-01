@@ -4,3 +4,6 @@
 2026-07-01 14:39:42.304 | INFO     | app.services.shopee_service:convert:9 - Receive URL: https://shopee.vn/product/123/456
 2026-07-01 14:39:42.304 | SUCCESS  | app.services.shopee_service:convert:19 - {'shop_id': '123', 'item_id': '456'}
 2026-07-01 14:39:42.305 | INFO     | app.api.zalo:webhook:28 - {'success': True, 'shop_id': '123', 'item_id': '456'}
+2026-07-01 15:03:55.483 | INFO     | app.services.shopee_service:convert:9 - Receive URL: https://shopee.vn/product/111222333/444555666
+2026-07-01 15:03:55.483 | INFO     | app.services.shopee_service:convert:11 - Expanded URL: https://shopee.vn/product/111222333/444555666
+2026-07-01 15:03:55.484 | SUCCESS  | app.services.shopee_service:convert:21 - {'shop_id': '111222333', 'item_id': '444555666'}

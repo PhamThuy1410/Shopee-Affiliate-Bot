@@ -1,5 +1,7 @@
 from fastapi import FastAPI
+
 from app.api.routes import router
+from app.api.zalo import router as zalo_router
 
 app = FastAPI(
     title="Shopee Affiliate Bot",
@@ -7,6 +9,7 @@ app = FastAPI(
 )
 
 app.include_router(router)
+app.include_router(zalo_router)
 
 
 @app.get("/")

@@ -2,6 +2,7 @@ from fastapi import APIRouter
 
 from app.schemas.zalo import ZaloWebhook
 from app.services.shopee_service import ShopeeService
+from app.utils.logger import logger
 
 router = APIRouter(prefix="/zalo", tags=["Zalo"])
 
@@ -20,8 +21,6 @@ async def webhook(data: ZaloWebhook):
 
     result = ShopeeService.convert(message)
 
-    print("=" * 60)
-    print(result)
-    print("=" * 60)
+    logger.info(result)
 
     return result

@@ -1,5 +1,6 @@
 from app.utils.parser import parse_shopee_url, expand_short_url
 from app.utils.logger import logger
+from app.utils.exceptions import InvalidShopeeUrl
 
 class ShopeeService:
 
@@ -13,10 +14,7 @@ class ShopeeService:
 
         if result is None:
             logger.error("Invalid Shopee URL")
-            return {
-                "success": False,
-                "message": "Invalid Shopee URL"
-            }
+            raise InvalidShopeeUrl()
 
         logger.success(result)
         return {
